@@ -1,4 +1,4 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 import { SchemaFactoryHelper } from 'src/commons/helpers/schema-factory.helper';
 import { IWorkoutRoutine } from 'src/workout-routine/interfaces/workout-routine';

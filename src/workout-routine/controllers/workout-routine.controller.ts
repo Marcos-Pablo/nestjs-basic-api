@@ -6,13 +6,16 @@ import {
   Param,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
 import { WorkoutRoutineResponseDto } from '../dtos/workout-routine-response';
 import { WorkoutRoutineService } from '../services/workout-routine.service';
 import { WorkoutRoutineRequestParam } from '../dtos/workout-routine-request.param';
 import { WorkoutRoutineRequestDto } from '../dtos/workout-routine-request.dto';
+import { AuthGuard } from 'src/auth/authentication-guards/auth.guard';
 
 @Controller('workout-routine')
+@UseGuards(AuthGuard)
 export class WorkoutRoutineController {
   constructor(private readonly workoutRoutineService: WorkoutRoutineService) {}
   @Get()

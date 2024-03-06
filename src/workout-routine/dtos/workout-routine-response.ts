@@ -3,7 +3,7 @@ import { IWorkoutRoutine } from '../interfaces/workout-routine';
 export class WorkoutRoutineResponseDto {
   id: string;
   name: string;
-  totalDays: number;
+  total_days: number;
 
   static createFromWorkoutRoutine(
     workoutRoutine: IWorkoutRoutine,
@@ -11,7 +11,7 @@ export class WorkoutRoutineResponseDto {
     const workoutRoutineResponseDto = new WorkoutRoutineResponseDto();
     workoutRoutineResponseDto.id = workoutRoutine.getId();
     workoutRoutineResponseDto.name = workoutRoutine.getName();
-    workoutRoutineResponseDto.totalDays = workoutRoutine.getTotalDays();
+    workoutRoutineResponseDto.total_days = workoutRoutine.getTotalDays();
 
     return workoutRoutineResponseDto;
   }
